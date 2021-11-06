@@ -1,7 +1,10 @@
 var usernamereg="";
 var passwordreg="";
+function matchPassword(txt)
+{
+    
+}
 function passwordValidation(txt) {
-    //alert("ASDNKJ");
     var decimal = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,12}$/;
     if (txt.value.match(decimal)) {
         return true;
@@ -13,7 +16,7 @@ function passwordValidation(txt) {
 }
 function registerStore()
 {
-    usernamereg = document.registration.user-name.value;
+    usernamereg = document.registration.username.value;
     passwordreg = document.registration.password.value;
 
 }

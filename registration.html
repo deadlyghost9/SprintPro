@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration</title>
   <link rel="stylesheet" href="styler.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 </head>
 
 <body>
@@ -17,16 +18,16 @@
       </div>
       <div class="row clearfix">
         <div class="">
-          <!--Need to ADD ONSUBMIT METHOD-->>
-          <form name="registration" method="post" action="login.html" onsubmit="">
+          <!--Need to ADD ONSUBMIT METHOD-->
+          <form name="registration" onsubmit="">
             <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
               <input type="email" name="email" placeholder="Email" required />
             </div>
             <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-              <input type="password" name="password" placeholder="Password" required />
+              <input type="password" onchange="passwordValidation(this)" name="password" placeholder="Password" required />
             </div>
             <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-              <input type="password" name="password" placeholder="Confirm Password" required />
+              <input type="password" name="password" onchange="" placeholder="Confirm Password" required />
             </div>
             <div class="row clearfix">
               <div class="col_half">
@@ -37,13 +38,11 @@
               <div class="col_half">
                 <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
                   <input type="text" name="name" placeholder="Last Name" required />
-
-
                 </div>
               </div>
             </div>
             <div class="input_field radio_option">
-              <lable>Gender: </lable>
+              <lable for="month">Gender:</lable>
               <input type="radio" name="radiogroup1" id="rd1">
               <label for="rd1">Male</label>
               <input type="radio" name="radiogroup1" id="rd2">
@@ -51,8 +50,8 @@
             </div>
 
             <!-- DATE OF BIRTH INFO -->
-            <legend style="color: #FFFFF0; margin-left: 10px"> <span style="color: #FF6347"></span></legend>
-            <label for="month" style="margin-left: 10px">Date of Birth:</label>
+            <div class="input_field select_option">
+            <label for="month">Date of Birth:</label>
             <select id="month" name="birth-month" required="">
               <option value="">Month</option>
               <option value="01">January</option>
@@ -135,23 +134,27 @@
               <option value="1981">1981</option>
               <option value="1980">1980</option>
             </select>
-            <br>
-            <br>
+            </div>
             <!-- USERNAME INFO -->
-            <label for="user-name" style="margin-left: 10px;;color: #FFFFF0">User
-              Name: <span style="color: #FF6347"></span></label><br>
-            <input id="user-name" type="text" name="user-name" placeholder="Your
-  User Name" required style="border: solid 1px;margin-left:5px;width:
-  350px">
-            <br>
-            <br>
+            <div class="input_field">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="username" id="username" placeholder="UserName" required />
+              </div>
+          </div>
 
 
             <div class="input_field select_option">
               <select>
                 <option>Select a country</option>
-                <option>Option 1</option>
-                <option>Option 2</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Hong Kong">Hong Kong</option>
+                <option value="India">India</option>
+                <option value="Japan">Japan</option>
+                <option value="Korea">Korea</option>
+                <option value="Laos">Laos</option>
+                <option value="Myanmar">Myanmar</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Thailand">Thailand</option>
               </select>
               <div class="select_arrow"></div>
             </div>
@@ -167,6 +170,7 @@
     </div>
   </div>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>
