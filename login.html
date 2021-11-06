@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login </title>
+    <link rel="stylesheet" href="stylel.css">
+</head>
+
+<body background="https://www.wallpapertip.com/wmimgs/85-858122_indian-railways-diwali-offer-railway-loco-pilot.jpg">
+    <form name="login" method="post" action="" onsubmit="authentication()">
+        <div class="log-in-card">
+            <h3>Log In</h3>
+            <div class="input-div">
+                <label for="UserName">UserName</label>
+                <input type="text" placeholder="UserName" name="userName" id="userName">
+            </div>
+            <div class="input-div">
+                <label for="Password">Password</label>
+                <input type="password" placeholder="Password" name="password" id="password" onblur="passwordValidation(this)">
+            </div>
+            <div><input type="submit" class="btn" value="Log In" /></div>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
